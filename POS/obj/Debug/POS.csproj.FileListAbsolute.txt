@@ -1,0 +1,13 @@
+S:\Projects\pos\POS\POS\bin\Debug\POS.exe.config
+S:\Projects\pos\POS\POS\bin\Debug\POS.exe
+S:\Projects\pos\POS\POS\bin\Debug\POS.pdb
+S:\Projects\pos\POS\POS\obj\Debug\POS.csprojAssemblyReference.cache
+S:\Projects\pos\POS\POS\obj\Debug\POS.Form1.resources
+S:\Projects\pos\POS\POS\obj\Debug\POS.frmBasket.resources
+S:\Projects\pos\POS\POS\obj\Debug\POS.Properties.Resources.resources
+S:\Projects\pos\POS\POS\obj\Debug\POS.csproj.GenerateResource.cache
+S:\Projects\pos\POS\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
+S:\Projects\pos\POS\POS\obj\Debug\POS.exe
+S:\Projects\pos\POS\POS\obj\Debug\POS.pdb
+S:\Projects\pos\POS\POS\obj\Debug\POS.frmPizzas.resources
+S:\Projects\pos\POS\POS\obj\Debug\POS.frmPizzaSize.resources
