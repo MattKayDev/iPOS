@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\POS\POS\bin\Debug\POS.exe.config
+C:\Users\Admin\source\repos\POS\POS\bin\Debug\POS.exe
+C:\Users\Admin\source\repos\POS\POS\bin\Debug\POS.pdb
+C:\Users\Admin\source\repos\POS\POS\bin\Debug\POS.xml
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.vbprojAssemblyReference.cache
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.Form1.resources
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.frmBasket.resources
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.Resources.resources
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.vbproj.GenerateResource.cache
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.exe
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.xml
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.pdb
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.frmPizzas.resources
+C:\Users\Admin\source\repos\POS\POS\obj\Debug\POS.frmPizzaSizes.resources
