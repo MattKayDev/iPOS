@@ -65,6 +65,54 @@ Namespace My
                 Me("delivery") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Testing")>  _
+        Public Property license() As String
+            Get
+                Return CType(Me("license"),String)
+            End Get
+            Set
+                Me("license") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property licenseEntered() As Boolean
+            Get
+                Return CType(Me("licenseEntered"),Boolean)
+            End Get
+            Set
+                Me("licenseEntered") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\pos\data\POS.mak")>  _
+        Public Property dbPath() As String
+            Get
+                Return CType(Me("dbPath"),String)
+            End Get
+            Set
+                Me("dbPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\pos\data\lic\POS.wlk")>  _
+        Public Property nextLicensePath() As String
+            Get
+                Return CType(Me("nextLicensePath"),String)
+            End Get
+            Set
+                Me("nextLicensePath") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

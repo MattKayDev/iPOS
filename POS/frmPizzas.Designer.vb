@@ -23,6 +23,7 @@ Partial Class frmPizzas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPizzas))
         Me.timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.label2 = New System.Windows.Forms.Label()
@@ -46,9 +47,11 @@ Partial Class frmPizzas
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
         Me.dgvBasket = New System.Windows.Forms.DataGridView()
-        Me.cProduct = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button17 = New System.Windows.Forms.Button()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvBasket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,9 +61,11 @@ Partial Class frmPizzas
         '
         'lblVersion
         '
+        Me.lblVersion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVersion.Location = New System.Drawing.Point(291, 43)
+        Me.lblVersion.Location = New System.Drawing.Point(458, 43)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(88, 13)
         Me.lblVersion.TabIndex = 46
@@ -70,9 +75,11 @@ Partial Class frmPizzas
         '
         'label2
         '
+        Me.label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.Location = New System.Drawing.Point(380, 43)
+        Me.label2.Location = New System.Drawing.Point(547, 43)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(80, 13)
         Me.label2.TabIndex = 45
@@ -80,11 +87,12 @@ Partial Class frmPizzas
         '
         'lblTime
         '
+        Me.lblTime.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTime.AutoSize = True
         Me.lblTime.BackColor = System.Drawing.Color.Black
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(753, 20)
+        Me.lblTime.Location = New System.Drawing.Point(1009, 20)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(135, 33)
         Me.lblTime.TabIndex = 44
@@ -92,8 +100,9 @@ Partial Class frmPizzas
         '
         'pictureBox2
         '
+        Me.pictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox2.BackColor = System.Drawing.Color.Black
-        Me.pictureBox2.Location = New System.Drawing.Point(732, 12)
+        Me.pictureBox2.Location = New System.Drawing.Point(988, 12)
         Me.pictureBox2.Name = "pictureBox2"
         Me.pictureBox2.Size = New System.Drawing.Size(178, 50)
         Me.pictureBox2.TabIndex = 43
@@ -101,10 +110,12 @@ Partial Class frmPizzas
         '
         'label1
         '
+        Me.label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.Red
-        Me.label1.Location = New System.Drawing.Point(288, 9)
+        Me.label1.Location = New System.Drawing.Point(455, 9)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(172, 31)
         Me.label1.TabIndex = 42
@@ -136,7 +147,7 @@ Partial Class frmPizzas
         '
         Me.button16.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button16.Location = New System.Drawing.Point(191, 407)
+        Me.button16.Location = New System.Drawing.Point(191, 360)
         Me.button16.Name = "button16"
         Me.button16.Size = New System.Drawing.Size(138, 41)
         Me.button16.TabIndex = 39
@@ -292,43 +303,77 @@ Partial Class frmPizzas
         Me.dgvBasket.AllowUserToDeleteRows = False
         Me.dgvBasket.AllowUserToResizeColumns = False
         Me.dgvBasket.AllowUserToResizeRows = False
+        Me.dgvBasket.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBasket.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cProduct, Me.cPrice})
-        Me.dgvBasket.Location = New System.Drawing.Point(416, 78)
+        Me.dgvBasket.Location = New System.Drawing.Point(672, 78)
         Me.dgvBasket.Name = "dgvBasket"
         Me.dgvBasket.ReadOnly = True
-        Me.dgvBasket.Size = New System.Drawing.Size(494, 426)
+        Me.dgvBasket.Size = New System.Drawing.Size(494, 479)
         Me.dgvBasket.TabIndex = 47
-        '
-        'cProduct
-        '
-        Me.cProduct.HeaderText = "Product"
-        Me.cProduct.Name = "cProduct"
-        Me.cProduct.ReadOnly = True
-        Me.cProduct.Width = 350
-        '
-        'cPrice
-        '
-        Me.cPrice.HeaderText = "Price"
-        Me.cPrice.Name = "cPrice"
-        Me.cPrice.ReadOnly = True
         '
         'Button17
         '
+        Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(342, 475)
+        Me.Button17.Location = New System.Drawing.Point(633, 38)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(68, 29)
+        Me.Button17.Size = New System.Drawing.Size(68, 34)
         Me.Button17.TabIndex = 48
         Me.Button17.Text = "X"
         Me.Button17.UseVisualStyleBackColor = True
+        '
+        'lblTotal
+        '
+        Me.lblTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.ForeColor = System.Drawing.Color.Red
+        Me.lblTotal.Location = New System.Drawing.Point(824, 560)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(87, 31)
+        Me.lblTotal.TabIndex = 57
+        Me.lblTotal.Text = "00.00"
+        Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(788, 560)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 31)
+        Me.Label4.TabIndex = 56
+        Me.Label4.Text = "£"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(666, 560)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 31)
+        Me.Label3.TabIndex = 55
+        Me.Label3.Text = "TOTAL:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Timer2
+        '
         '
         'frmPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(922, 517)
+        Me.ClientSize = New System.Drawing.Size(1178, 600)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.dgvBasket)
         Me.Controls.Add(Me.lblVersion)
@@ -352,8 +397,8 @@ Partial Class frmPizzas
         Me.Controls.Add(Me.button3)
         Me.Controls.Add(Me.button2)
         Me.Controls.Add(Me.button1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPizzas"
-        Me.Text = "frmPizzas"
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvBasket, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -384,7 +429,9 @@ Partial Class frmPizzas
     Private WithEvents button2 As Button
     Private WithEvents button1 As Button
     Private WithEvents dgvBasket As DataGridView
-    Friend WithEvents cProduct As DataGridViewTextBoxColumn
-    Friend WithEvents cPrice As DataGridViewTextBoxColumn
     Private WithEvents Button17 As Button
+    Private WithEvents lblTotal As Label
+    Private WithEvents Label4 As Label
+    Private WithEvents Label3 As Label
+    Friend WithEvents Timer2 As Timer
 End Class

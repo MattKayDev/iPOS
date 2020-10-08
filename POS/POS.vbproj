@@ -11,8 +11,24 @@
     <AssemblyName>POS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,9 +62,51 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\pos.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MattKayDev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -65,6 +123,7 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +135,108 @@
       <DependentUpon>frmBasket.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBasket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBurger.Designer.vb">
+      <DependentUpon>frmBurger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBurger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBurgerSauce.Designer.vb">
+      <DependentUpon>frmBurgerSauce.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBurgerSauce.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBurgerSides.Designer.vb">
+      <DependentUpon>frmBurgerSides.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBurgerSides.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBurgersize.Designer.vb">
+      <DependentUpon>frmBurgersize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBurgersize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckout.Designer.vb">
+      <DependentUpon>frmCheckout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrinks.Designer.vb">
+      <DependentUpon>frmDrinks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrinks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFriedChicken.Designer.vb">
+      <DependentUpon>frmFriedChicken.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFriedChicken.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGarlicBread.Designer.vb">
+      <DependentUpon>frmGarlicBread.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGarlicBread.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJacketPotatoes.Designer.vb">
+      <DependentUpon>frmJacketPotatoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJacketPotatoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKebabs.Designer.vb">
+      <DependentUpon>frmKebabs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKebabs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKebabSalad.Designer.vb">
+      <DependentUpon>frmKebabSalad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKebabSalad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKebabSauce.Designer.vb">
+      <DependentUpon>frmKebabSauce.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKebabSauce.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKebabSelect.Designer.vb">
+      <DependentUpon>frmKebabSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKebabSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKidsMeals.Designer.vb">
+      <DependentUpon>frmKidsMeals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKidsMeals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMealDrink.Designer.vb">
+      <DependentUpon>frmMealDrink.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMealDrink.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPizzaBase.Designer.vb">
+      <DependentUpon>frmPizzaBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPizzaBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPizzaCalzone.Designer.vb">
+      <DependentUpon>frmPizzaCalzone.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPizzaCalzone.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPizzas.Designer.vb">
@@ -90,10 +251,29 @@
     <Compile Include="frmPizzaSizes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPizzaToppings.Designer.vb">
+      <DependentUpon>frmPizzaToppings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPizzaToppings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSideOrders.Designer.vb">
+      <DependentUpon>frmSideOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSideOrders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWraps.Designer.vb">
+      <DependentUpon>frmWraps.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWraps.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,6 +285,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Printer.vb" />
+    <Compile Include="PrintingFormat.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -113,11 +295,71 @@
     <EmbeddedResource Include="frmBasket.resx">
       <DependentUpon>frmBasket.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBurger.resx">
+      <DependentUpon>frmBurger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBurgerSauce.resx">
+      <DependentUpon>frmBurgerSauce.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBurgerSides.resx">
+      <DependentUpon>frmBurgerSides.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBurgersize.resx">
+      <DependentUpon>frmBurgersize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckout.resx">
+      <DependentUpon>frmCheckout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrinks.resx">
+      <DependentUpon>frmDrinks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFriedChicken.resx">
+      <DependentUpon>frmFriedChicken.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGarlicBread.resx">
+      <DependentUpon>frmGarlicBread.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJacketPotatoes.resx">
+      <DependentUpon>frmJacketPotatoes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKebabs.resx">
+      <DependentUpon>frmKebabs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKebabSalad.resx">
+      <DependentUpon>frmKebabSalad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKebabSauce.resx">
+      <DependentUpon>frmKebabSauce.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKebabSelect.resx">
+      <DependentUpon>frmKebabSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKidsMeals.resx">
+      <DependentUpon>frmKidsMeals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMealDrink.resx">
+      <DependentUpon>frmMealDrink.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPizzaBase.resx">
+      <DependentUpon>frmPizzaBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPizzaCalzone.resx">
+      <DependentUpon>frmPizzaCalzone.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPizzas.resx">
       <DependentUpon>frmPizzas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPizzaSizes.resx">
       <DependentUpon>frmPizzaSizes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPizzaToppings.resx">
+      <DependentUpon>frmPizzaToppings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSideOrders.resx">
+      <DependentUpon>frmSideOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWraps.resx">
+      <DependentUpon>frmWraps.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -128,6 +370,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="MattKayDev.pfx" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -137,6 +381,18 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pos.ico" />
+    <None Include="Resources\pos.png" />
+    <None Include="Resources\pos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

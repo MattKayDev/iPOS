@@ -5,5 +5,17 @@
     <Setting Name="delivery" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="license" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Testing</Value>
+    </Setting>
+    <Setting Name="licenseEntered" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="dbPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\pos\data\POS.mak</Value>
+    </Setting>
+    <Setting Name="nextLicensePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\pos\data\lic\POS.wlk</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

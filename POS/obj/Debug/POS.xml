@@ -22,5 +22,15 @@ POS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:POS.My.Resources.Resources.posICO">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:POS.My.Resources.Resources.posPNG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
