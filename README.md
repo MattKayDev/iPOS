@@ -1,2 +1,2 @@
 # POS
- POS system using C# and .Net Framework
+ POS system using VB.net
