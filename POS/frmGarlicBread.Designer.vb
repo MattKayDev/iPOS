@@ -49,6 +49,8 @@ Partial Class frmGarlicBread
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         CType(Me.dgvBasket, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -59,7 +61,7 @@ Partial Class frmGarlicBread
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.Red
-        Me.lblTotal.Location = New System.Drawing.Point(824, 560)
+        Me.lblTotal.Location = New System.Drawing.Point(654, 689)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(87, 31)
         Me.lblTotal.TabIndex = 68
@@ -72,7 +74,7 @@ Partial Class frmGarlicBread
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(788, 560)
+        Me.Label4.Location = New System.Drawing.Point(618, 689)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(30, 31)
         Me.Label4.TabIndex = 67
@@ -85,7 +87,7 @@ Partial Class frmGarlicBread
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(666, 560)
+        Me.Label3.Location = New System.Drawing.Point(496, 689)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 31)
         Me.Label3.TabIndex = 66
@@ -97,9 +99,9 @@ Partial Class frmGarlicBread
         Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(598, 78)
+        Me.Button17.Location = New System.Drawing.Point(425, 652)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(68, 34)
+        Me.Button17.Size = New System.Drawing.Size(71, 34)
         Me.Button17.TabIndex = 65
         Me.Button17.Text = "X"
         Me.Button17.UseVisualStyleBackColor = True
@@ -113,10 +115,10 @@ Partial Class frmGarlicBread
         Me.dgvBasket.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBasket.Location = New System.Drawing.Point(672, 78)
+        Me.dgvBasket.Location = New System.Drawing.Point(502, 78)
         Me.dgvBasket.Name = "dgvBasket"
         Me.dgvBasket.ReadOnly = True
-        Me.dgvBasket.Size = New System.Drawing.Size(494, 479)
+        Me.dgvBasket.Size = New System.Drawing.Size(494, 608)
         Me.dgvBasket.TabIndex = 64
         '
         'lblVersion
@@ -152,7 +154,7 @@ Partial Class frmGarlicBread
         Me.lblTime.BackColor = System.Drawing.Color.Black
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(1009, 20)
+        Me.lblTime.Location = New System.Drawing.Point(839, 20)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(135, 33)
         Me.lblTime.TabIndex = 61
@@ -162,7 +164,7 @@ Partial Class frmGarlicBread
         '
         Me.pictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox2.BackColor = System.Drawing.Color.Black
-        Me.pictureBox2.Location = New System.Drawing.Point(988, 12)
+        Me.pictureBox2.Location = New System.Drawing.Point(818, 12)
         Me.pictureBox2.Name = "pictureBox2"
         Me.pictureBox2.Size = New System.Drawing.Size(178, 50)
         Me.pictureBox2.TabIndex = 60
@@ -204,7 +206,7 @@ Partial Class frmGarlicBread
         Me.button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button4.Location = New System.Drawing.Point(12, 347)
         Me.button4.Name = "button4"
-        Me.button4.Size = New System.Drawing.Size(138, 71)
+        Me.button4.Size = New System.Drawing.Size(152, 71)
         Me.button4.TabIndex = 72
         Me.button4.Text = "GARLIC BREAD WITH CHEESE + PEPPERONI 10"""
         Me.button4.UseVisualStyleBackColor = True
@@ -215,7 +217,7 @@ Partial Class frmGarlicBread
         Me.button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button3.Location = New System.Drawing.Point(12, 270)
         Me.button3.Name = "button3"
-        Me.button3.Size = New System.Drawing.Size(138, 71)
+        Me.button3.Size = New System.Drawing.Size(152, 71)
         Me.button3.TabIndex = 71
         Me.button3.Text = "GARLIC BREAD WITH CHEESE + MUSHROOM 10"""
         Me.button3.UseVisualStyleBackColor = True
@@ -226,7 +228,7 @@ Partial Class frmGarlicBread
         Me.button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button2.Location = New System.Drawing.Point(12, 193)
         Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(138, 71)
+        Me.button2.Size = New System.Drawing.Size(152, 71)
         Me.button2.TabIndex = 70
         Me.button2.Text = "GARLIC BREAD WITH CHEESE 10"""
         Me.button2.UseVisualStyleBackColor = True
@@ -237,7 +239,7 @@ Partial Class frmGarlicBread
         Me.button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button1.Location = New System.Drawing.Point(12, 116)
         Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(138, 71)
+        Me.button1.Size = New System.Drawing.Size(152, 71)
         Me.button1.TabIndex = 69
         Me.button1.Text = "GRALIC BREAD 10"""
         Me.button1.UseVisualStyleBackColor = True
@@ -246,9 +248,9 @@ Partial Class frmGarlicBread
         '
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(214, 347)
+        Me.Button5.Location = New System.Drawing.Point(170, 349)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(138, 71)
+        Me.Button5.Size = New System.Drawing.Size(152, 71)
         Me.Button5.TabIndex = 76
         Me.Button5.Text = "GARLIC BREAD WITH CHEESE + PEPPERONI 12"""
         Me.Button5.UseVisualStyleBackColor = True
@@ -257,9 +259,9 @@ Partial Class frmGarlicBread
         '
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(214, 270)
+        Me.Button6.Location = New System.Drawing.Point(170, 272)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(138, 71)
+        Me.Button6.Size = New System.Drawing.Size(152, 71)
         Me.Button6.TabIndex = 75
         Me.Button6.Text = "GARLIC BREAD WITH CHEESE + MUSHROOMS 12"""
         Me.Button6.UseVisualStyleBackColor = True
@@ -268,9 +270,9 @@ Partial Class frmGarlicBread
         '
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(214, 193)
+        Me.Button7.Location = New System.Drawing.Point(170, 195)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(138, 71)
+        Me.Button7.Size = New System.Drawing.Size(152, 71)
         Me.Button7.TabIndex = 74
         Me.Button7.Text = "GARLIC BREAD WITH CHEESE 12"""
         Me.Button7.UseVisualStyleBackColor = True
@@ -279,9 +281,9 @@ Partial Class frmGarlicBread
         '
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(214, 116)
+        Me.Button8.Location = New System.Drawing.Point(170, 118)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(138, 71)
+        Me.Button8.Size = New System.Drawing.Size(152, 71)
         Me.Button8.TabIndex = 73
         Me.Button8.Text = "GARLIC BREAD 12"""
         Me.Button8.UseVisualStyleBackColor = True
@@ -290,9 +292,9 @@ Partial Class frmGarlicBread
         '
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(408, 347)
+        Me.Button9.Location = New System.Drawing.Point(328, 349)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(138, 71)
+        Me.Button9.Size = New System.Drawing.Size(152, 71)
         Me.Button9.TabIndex = 80
         Me.Button9.Text = "GARLIC BREAD WITH CHEESE + PEPPERONI 14"""
         Me.Button9.UseVisualStyleBackColor = True
@@ -301,9 +303,9 @@ Partial Class frmGarlicBread
         '
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(408, 270)
+        Me.Button10.Location = New System.Drawing.Point(328, 272)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(138, 71)
+        Me.Button10.Size = New System.Drawing.Size(152, 71)
         Me.Button10.TabIndex = 79
         Me.Button10.Text = "GARLIC BREAD WITH CHEESE + MUSHROOMS 14"""
         Me.Button10.UseVisualStyleBackColor = True
@@ -312,9 +314,9 @@ Partial Class frmGarlicBread
         '
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(408, 193)
+        Me.Button11.Location = New System.Drawing.Point(328, 195)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(138, 71)
+        Me.Button11.Size = New System.Drawing.Size(152, 71)
         Me.Button11.TabIndex = 78
         Me.Button11.Text = "GARLIC BREAD WITH CHEESE 14"""
         Me.Button11.UseVisualStyleBackColor = True
@@ -323,18 +325,42 @@ Partial Class frmGarlicBread
         '
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(408, 116)
+        Me.Button12.Location = New System.Drawing.Point(328, 118)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(138, 71)
+        Me.Button12.Size = New System.Drawing.Size(152, 71)
         Me.Button12.TabIndex = 77
         Me.Button12.Text = "GARLIC BREAD 14"""
         Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.Location = New System.Drawing.Point(12, 490)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(106, 71)
+        Me.Button13.TabIndex = 81
+        Me.Button13.Text = "FREE GARLIC BREAD"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.Location = New System.Drawing.Point(328, 490)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(106, 71)
+        Me.Button14.TabIndex = 82
+        Me.Button14.Text = "FREE ADD CHEESE"
+        Me.Button14.UseVisualStyleBackColor = True
         '
         'frmGarlicBread
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1178, 600)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button11)
@@ -392,4 +418,6 @@ Partial Class frmGarlicBread
     Private WithEvents Button10 As Button
     Private WithEvents Button11 As Button
     Private WithEvents Button12 As Button
+    Private WithEvents Button13 As Button
+    Private WithEvents Button14 As Button
 End Class

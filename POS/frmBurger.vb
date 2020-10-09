@@ -31,6 +31,7 @@ Public Class frmBurger
     End Sub
 
     Private Sub frmBurger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         'Me.WindowState = FormWindowState.Maximized
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
@@ -85,30 +86,28 @@ Public Class frmBurger
         ElseIf chickenTikkaBurger Then
             selectedBurger = "CHICKEN TIKKA BURGER"
             If burgerSize Then
-                price = 3
+                price = 4.3
             Else
-                price = 4.5
             End If
         ElseIf chickenSizzlerBurger Then
             selectedBurger = "CHICKEN SIZZLER BURGER"
             If burgerSize Then
-                price = 3
+                price = 4.3
             Else
-                price = 4.5
             End If
         ElseIf mexicanBurger Then
             selectedBurger = "MEXICAN BURGER"
             If burgerSize Then
-                price = 3
-            Else
                 price = 4.5
+            Else
+                price = 5
             End If
         ElseIf hawaiianBurger Then
             selectedBurger = "HAWAIIAN BURGER"
             If burgerSize Then
-                price = 3
-            Else
                 price = 4.5
+            Else
+                price = 5
             End If
         ElseIf chickenFilletBurgerMeal Then
             selectedBurger = "CHICKEN FILLET BURGER MEAL"
@@ -318,5 +317,9 @@ Public Class frmBurger
         frmBasket.dtPublic.Rows.Add("Meal", "£", 1.7)
         frmBasket.dtPublic.Rows.Add("Chips")
         frmMealDrink.Show()
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        frmBasket.dtPublic.Rows.Add("NO CHEESE")
     End Sub
 End Class

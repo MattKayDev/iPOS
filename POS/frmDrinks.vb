@@ -24,8 +24,9 @@ Public Class frmDrinks
     End Sub
 
     Private Sub frmDrinks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         Me.WindowState = FormWindowState.Maximized
-        versionNumber = Assembly.GetExecutingAssembly().GetName().Version
+        VERSIONnUMBER = Assembly.GetExecutingAssembly().GetName().Version
         lblTime.Text = DateTime.Now.ToString("HH:mm:ss")
         lblVersion.Text = versionNumber.ToString()
         Timer1.Start()

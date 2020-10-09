@@ -52,6 +52,7 @@ Public Class frmCheckout
     Dim selectedAddress As Boolean
 
     Private Sub frmCheckout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         If My.Settings.delivery = True Then
             delivery = "Delivery"
         Else
@@ -732,7 +733,7 @@ Public Class frmCheckout
         'You could store the db path in the Settings of the App.
         'dbPathAndFilename = My.Settings.dbPath
         dbPathAndFilename = My.Settings.dbPath
-        con.ConnectionString = dbProvider & dbSource & dbPathAndFilename
+        con.ConnectionString = dbProvider & dbSource & dbPathAndFilename & "; Jet OLEDB:Database Password=M4ttKayD3v;"
 
         con.Open()
         'sql = "SELECT address FROM tblAddresses WHERE PostCode=" & txtPostCode.Text & " AND HouseNo = " & txtNo.Text

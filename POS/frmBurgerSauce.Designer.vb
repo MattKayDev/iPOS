@@ -136,6 +136,7 @@ Partial Class frmBurgerSauce
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBurgerSauce"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

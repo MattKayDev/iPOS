@@ -70,6 +70,7 @@ Partial Class frmKebabSelect
         Me.Controls.Add(Me.button3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmKebabSelect"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

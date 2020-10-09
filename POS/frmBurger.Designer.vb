@@ -50,6 +50,7 @@ Partial Class frmBurger
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvBasket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -87,7 +88,7 @@ Partial Class frmBurger
         Me.lblTime.BackColor = System.Drawing.Color.Black
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(878, 20)
+        Me.lblTime.Location = New System.Drawing.Point(839, 20)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(135, 33)
         Me.lblTime.TabIndex = 54
@@ -97,7 +98,7 @@ Partial Class frmBurger
         '
         Me.pictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox2.BackColor = System.Drawing.Color.Black
-        Me.pictureBox2.Location = New System.Drawing.Point(857, 12)
+        Me.pictureBox2.Location = New System.Drawing.Point(818, 12)
         Me.pictureBox2.Name = "pictureBox2"
         Me.pictureBox2.Size = New System.Drawing.Size(178, 50)
         Me.pictureBox2.TabIndex = 53
@@ -136,10 +137,10 @@ Partial Class frmBurger
         Me.dgvBasket.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBasket.Location = New System.Drawing.Point(541, 68)
+        Me.dgvBasket.Location = New System.Drawing.Point(502, 68)
         Me.dgvBasket.Name = "dgvBasket"
         Me.dgvBasket.ReadOnly = True
-        Me.dgvBasket.Size = New System.Drawing.Size(494, 449)
+        Me.dgvBasket.Size = New System.Drawing.Size(494, 595)
         Me.dgvBasket.TabIndex = 58
         '
         'lblTotal
@@ -148,7 +149,7 @@ Partial Class frmBurger
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.Red
-        Me.lblTotal.Location = New System.Drawing.Point(693, 520)
+        Me.lblTotal.Location = New System.Drawing.Point(654, 666)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(87, 31)
         Me.lblTotal.TabIndex = 61
@@ -161,7 +162,7 @@ Partial Class frmBurger
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(657, 520)
+        Me.Label4.Location = New System.Drawing.Point(618, 666)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(30, 31)
         Me.Label4.TabIndex = 60
@@ -174,7 +175,7 @@ Partial Class frmBurger
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(535, 520)
+        Me.Label3.Location = New System.Drawing.Point(496, 666)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 31)
         Me.Label3.TabIndex = 59
@@ -183,10 +184,10 @@ Partial Class frmBurger
         '
         'Button17
         '
-        Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(467, 68)
+        Me.Button17.Location = New System.Drawing.Point(429, 629)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(68, 34)
         Me.Button17.TabIndex = 62
@@ -317,7 +318,7 @@ Partial Class frmBurger
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(138, 41)
         Me.Button11.TabIndex = 73
-        Me.Button11.Text = "Add Cheese"
+        Me.Button11.Text = "ADD CHEESE"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
@@ -328,25 +329,37 @@ Partial Class frmBurger
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(138, 41)
         Me.Button12.TabIndex = 74
-        Me.Button12.Text = "Salad/Sauce?"
+        Me.Button12.Text = "SALAD/SAUCE?"
         Me.Button12.UseVisualStyleBackColor = True
         '
         'Button13
         '
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(244, 414)
+        Me.Button13.Location = New System.Drawing.Point(244, 519)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(138, 41)
         Me.Button13.TabIndex = 95
         Me.Button13.Text = "MAKE IT A MEAL"
         Me.Button13.UseVisualStyleBackColor = True
         '
+        'Button14
+        '
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.Location = New System.Drawing.Point(244, 397)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(138, 41)
+        Me.Button14.TabIndex = 96
+        Me.Button14.Text = "NO CHEESE"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
         'frmBurger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1047, 583)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
@@ -407,4 +420,5 @@ Partial Class frmBurger
     Private WithEvents Button11 As Button
     Private WithEvents Button12 As Button
     Private WithEvents Button13 As Button
+    Private WithEvents Button14 As Button
 End Class

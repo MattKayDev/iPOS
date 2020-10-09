@@ -22,11 +22,15 @@ Public Class Form1
     Public dr As OleDbDataReader
     Dim cm As OleDbCommand
 
+    Dim foundAddress As Boolean
+
     Private Sub button2_Click(sender As Object, e As EventArgs) Handles btnDelivery.Click
         gpbPostCode.Visible = True
+        gpbPostCode.Size = New Size(765, 451)
     End Sub
 
     Private Sub button1_Click(sender As Object, e As EventArgs) Handles btnCollection.Click
+        gpbPostCode.Visible = False
         txtPostCode.Text = ""
         txtNo.Text = ""
         txtAddress.Text = ""
@@ -43,18 +47,24 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         Dim license As String = My.Settings.license
         If Not My.Settings.licenseEntered Then
             btnCollection.Enabled = False
             btnDelivery.Enabled = False
             txtLicense.Visible = True
             btnLicense.Visible = True
+
+
         Else
             btnCollection.Enabled = True
             btnDelivery.Enabled = True
             txtLicense.Visible = False
             btnLicense.Visible = False
         End If
+        Dim r As New Random
+        My.Settings.license = RandomString(r)
+        My.Computer.FileSystem.WriteAllText("C:\POS\data\lic\POS.wlk", My.Settings.license, False)
         dbProvider = "PROVIDER=Microsoft.Jet.OLEDB.4.0;" ' MDB
         'dbProvider = "PROVIDER=Microsoft.Ace.OLEDB.12.0;" 'ACCDB
         dbSource = "Data Source="
@@ -95,15 +105,17 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnLicense.Click
-        My.Settings.license = "Testing"
+        'Dim r As New Random
+        'My.Settings.license = RandomString(r)
+        Read_License()
         If txtLicense.Text = My.Settings.license Then
             My.Settings.licenseEntered = True
             btnDelivery.Enabled = True
             btnCollection.Enabled = True
             btnLicense.Visible = False
             txtLicense.Visible = False
-            Dim r As New Random
-            My.Settings.license = RandomString(r)
+            Dim rNew As New Random
+            My.Settings.license = RandomString(rNew)
             btnDelicense.Visible = False 'change in case of license testing
         Else
             My.Settings.licenseEntered = False
@@ -113,7 +125,13 @@ Public Class Form1
             txtLicense.Visible = True
         End If
 
-        My.Computer.FileSystem.WriteAllText("C:\POS\POS.wlk", My.Settings.license, False)
+        My.Computer.FileSystem.WriteAllText("C:\POS\data\lic\POS.wlk", My.Settings.license, False)
+    End Sub
+
+    Private Sub Read_License()
+        Dim fileReader As String
+        fileReader = My.Computer.FileSystem.ReadAllText("C:\POS\data\lic\POS.wlk")
+        My.Settings.license = fileReader
     End Sub
 
     Function RandomString(r As Random)
@@ -133,44 +151,48 @@ Public Class Form1
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         LoadData()
-        Dim result As DialogResult = MessageBox.Show(txtNo.Text & " " & txtAddress.Text,
+        If foundAddress Then
+            Dim result As DialogResult = MessageBox.Show(txtNo.Text & " " & txtAddress.Text,
                               "Confirm Address?",
                               MessageBoxButtons.YesNo)
 
-        If result = DialogResult.Yes Then
-            'Update Data here
-            frmCheckout.txtPostCode.Text = txtPostCode.Text
-            frmCheckout.basketPostCode = txtPostCode.Text
-            frmCheckout.txtAddress.Text = txtAddress.Text
-            If My.Settings.delivery = False Then
-                My.Settings.delivery = True
-            Else
-                My.Settings.delivery = True
-            End If
-            frmBasket.Show()
-            If frmBasket.dtPublic.Rows.Count = 0 Then
-                frmBasket.dtPublic.Rows.Add("Delivery Charge", "£", 1)
-            ElseIf frmBasket.dtPublic.Rows.Count > 0 Then
-                Dim blnCheck As Boolean
-                For Each row As DataGridViewRow In frmBasket.dgvBasket.Rows
-                    Dim check As String = row.Cells(0).Value
-                    If Not check = "Delivery Charge" Then
-                        blnCheck = False
-                    Else
-                        blnCheck = True
-                        Exit For
-                    End If
-                Next
-                If Not blnCheck Then
-                    frmBasket.dtPublic.Rows.Add("Delivery Charge", "£", 1)
+            If result = DialogResult.Yes Then
+                'Update Data here
+                frmCheckout.txtPostCode.Text = txtPostCode.Text
+                frmCheckout.basketPostCode = txtPostCode.Text
+                frmCheckout.txtAddress.Text = txtAddress.Text
+                If My.Settings.delivery = False Then
+                    My.Settings.delivery = True
+                Else
+                    My.Settings.delivery = True
                 End If
+                frmBasket.Show()
+                If frmBasket.dtPublic.Rows.Count = 0 Then
+                    frmBasket.dtPublic.Rows.Add("Delivery Charge", "£", 1)
+                ElseIf frmBasket.dtPublic.Rows.Count > 0 Then
+                    Dim blnCheck As Boolean
+                    For Each row As DataGridViewRow In frmBasket.dgvBasket.Rows
+                        Dim check As String = row.Cells(0).Value
+                        If Not check = "Delivery Charge" Then
+                            blnCheck = False
+                        Else
+                            blnCheck = True
+                            Exit For
+                        End If
+                    Next
+                    If Not blnCheck Then
+                        frmBasket.dtPublic.Rows.Add("Delivery Charge", "£", 1)
+                    End If
+
+                End If
+                Me.Hide()
+            Else
+                MessageBox.Show("Please ask the customer for the address, type it in and press Add" & vbCrLf & "Once address has been added press Enter again.")
+                btnAdd.Visible = True
 
             End If
-            Me.Hide()
-        Else
-            'MessageBox.Show("Please add the address by typing it in and clicking ADD")
-
         End If
+
 
 
 
@@ -183,7 +205,7 @@ Public Class Form1
         'You could store the db path in the Settings of the App.
         'dbPathAndFilename = My.Settings.dbPath
         dbPathAndFilename = My.Settings.dbPath
-        con.ConnectionString = dbProvider & dbSource & dbPathAndFilename
+        con.ConnectionString = dbProvider & dbSource & dbPathAndFilename & "; Jet OLEDB:Database Password=M4ttKayD3v;"
 
         con.Open()
         'sql = "SELECT address FROM tblAddresses WHERE PostCode=" & txtPostCode.Text & " AND HouseNo = " & txtNo.Text
@@ -197,7 +219,7 @@ Public Class Form1
         'DataGridView1.DataSource = ds.Tables("TABLE")
 
 
-        Dim found As Boolean
+
         Try
 
             cm = New OleDb.OleDbCommand
@@ -211,13 +233,13 @@ Public Class Form1
 
                 txtAddress.Text = dr("Address").ToString
                 If Not txtAddress.Text = "" Or IsDBNull(txtAddress.Text) Then
-                    found = True
+                    foundAddress = True
                 End If
 
             End While
             con.Close()
             'Exit Sub
-            If found = False Then
+            If foundAddress = False Then
                 MsgBox("Address not found. Please add it by filling in address details clicking button ADD ", MsgBoxStyle.Critical, MsgBoxResult.Ok)
                 btnAdd.Visible = True
                 btnEnter.Visible = False

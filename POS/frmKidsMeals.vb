@@ -2,6 +2,7 @@
 Public Class frmKidsMeals
     Dim versionNumber As Version
     Private Sub frmKidsMeals_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         'Me.WindowState = FormWindowState.Maximized
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
@@ -71,13 +72,19 @@ Public Class frmKidsMeals
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         frmBasket.dtPublic.Rows.Add("1PCE OF CHICKEN", "£", 3)
+        frmBasket.dtPublic.Rows.Add("CHIPS")
+        frmBasket.dtPublic.Rows.Add("CARTON")
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        frmBasket.dtPublic.Rows.Add("ICKEN NUGGETS (5)", "£", 4.5)
+        frmBasket.dtPublic.Rows.Add("5 CHICKEN NUGGETS", "£", 4.5)
+        frmBasket.dtPublic.Rows.Add("CHIPS")
+        frmBasket.dtPublic.Rows.Add("CARTON")
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        frmBasket.dtPublic.Rows.Add("CHICKEN STRIPS (3)", "£", 4)
+        frmBasket.dtPublic.Rows.Add("3 CHICKEN STRIPS", "£", 4)
+        frmBasket.dtPublic.Rows.Add("CHIPS")
+        frmBasket.dtPublic.Rows.Add("CARTON")
     End Sub
 End Class

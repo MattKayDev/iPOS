@@ -30,6 +30,7 @@ Public Class frmWraps
     End Sub
 
     Private Sub frmWraps_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
         lblTime.Text = DateTime.Now.ToString("HH:mm:ss")

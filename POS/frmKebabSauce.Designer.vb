@@ -135,6 +135,7 @@ Partial Class frmKebabSauce
         Me.Controls.Add(Me.button3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmKebabSauce"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

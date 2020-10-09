@@ -12,10 +12,13 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="dbPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\pos\data\POS.mak</Value>
+      <Value Profile="(Default)">C:\pos\data\POS.wdb</Value>
     </Setting>
     <Setting Name="nextLicensePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\pos\data\lic\POS.wlk</Value>
+    </Setting>
+    <Setting Name="posName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">iPOS - Il Padrino</Value>
     </Setting>
   </Settings>
 </SettingsFile>

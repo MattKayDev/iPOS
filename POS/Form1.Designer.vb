@@ -41,6 +41,12 @@ Partial Class Form1
         Me.btnLicense = New System.Windows.Forms.Button()
         Me.btnDelicense = New System.Windows.Forms.Button()
         Me.gpbPostCode = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.Button33 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -88,12 +94,6 @@ Partial Class Form1
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPostCode = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpbPostCode.SuspendLayout()
@@ -151,11 +151,11 @@ Partial Class Form1
         Me.button4.BackColor = System.Drawing.Color.Silver
         Me.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button4.Location = New System.Drawing.Point(16, 682)
+        Me.button4.Location = New System.Drawing.Point(644, 237)
         Me.button4.Name = "button4"
         Me.button4.Size = New System.Drawing.Size(137, 47)
         Me.button4.TabIndex = 14
-        Me.button4.Text = "Settings"
+        Me.button4.Text = "Prices"
         Me.button4.UseVisualStyleBackColor = False
         Me.button4.Visible = False
         '
@@ -163,11 +163,11 @@ Partial Class Form1
         '
         Me.btnDelivery.BackColor = System.Drawing.Color.Green
         Me.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDelivery.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelivery.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelivery.ForeColor = System.Drawing.Color.White
         Me.btnDelivery.Location = New System.Drawing.Point(16, 159)
         Me.btnDelivery.Name = "btnDelivery"
-        Me.btnDelivery.Size = New System.Drawing.Size(137, 60)
+        Me.btnDelivery.Size = New System.Drawing.Size(164, 60)
         Me.btnDelivery.TabIndex = 13
         Me.btnDelivery.Text = "Delivery"
         Me.btnDelivery.UseVisualStyleBackColor = False
@@ -185,13 +185,13 @@ Partial Class Form1
         '
         'btnCollection
         '
-        Me.btnCollection.BackColor = System.Drawing.Color.Yellow
+        Me.btnCollection.BackColor = System.Drawing.Color.Gold
         Me.btnCollection.FlatAppearance.BorderSize = 0
         Me.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCollection.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCollection.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCollection.Location = New System.Drawing.Point(16, 93)
         Me.btnCollection.Name = "btnCollection"
-        Me.btnCollection.Size = New System.Drawing.Size(137, 60)
+        Me.btnCollection.Size = New System.Drawing.Size(164, 60)
         Me.btnCollection.TabIndex = 11
         Me.btnCollection.Text = "Collection"
         Me.btnCollection.UseVisualStyleBackColor = False
@@ -328,10 +328,77 @@ Partial Class Form1
         Me.gpbPostCode.Controls.Add(Me.txtPostCode)
         Me.gpbPostCode.Location = New System.Drawing.Point(16, 225)
         Me.gpbPostCode.Name = "gpbPostCode"
-        Me.gpbPostCode.Size = New System.Drawing.Size(765, 451)
+        Me.gpbPostCode.Size = New System.Drawing.Size(164, 111)
         Me.gpbPostCode.TabIndex = 27
         Me.gpbPostCode.TabStop = False
         Me.gpbPostCode.Visible = False
+        '
+        'Button7
+        '
+        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(-335, -326)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(122, 60)
+        Me.Button7.TabIndex = 173
+        Me.Button7.Text = "Enter Address"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(-461, -326)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(122, 60)
+        Me.Button3.TabIndex = 172
+        Me.Button3.Text = "Enter No"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(-589, -326)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 60)
+        Me.Button2.TabIndex = 28
+        Me.Button2.Text = "Enter PostCode"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Location = New System.Drawing.Point(6, 403)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(121, 42)
+        Me.btnAdd.TabIndex = 171
+        Me.btnAdd.Text = "ADD"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(274, 77)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 31)
+        Me.Label3.TabIndex = 170
+        Me.Label3.Text = "Address"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(274, 111)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(367, 20)
+        Me.txtAddress.TabIndex = 169
         '
         'btnEnter
         '
@@ -847,73 +914,6 @@ Partial Class Form1
         Me.txtPostCode.Name = "txtPostCode"
         Me.txtPostCode.Size = New System.Drawing.Size(195, 20)
         Me.txtPostCode.TabIndex = 123
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(274, 77)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 31)
-        Me.Label3.TabIndex = 170
-        Me.Label3.Text = "Address"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Location = New System.Drawing.Point(274, 111)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(367, 20)
-        Me.txtAddress.TabIndex = 169
-        '
-        'btnAdd
-        '
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(6, 403)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(121, 42)
-        Me.btnAdd.TabIndex = 171
-        Me.btnAdd.Text = "ADD"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        Me.btnAdd.Visible = False
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(12, 14)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(122, 60)
-        Me.Button2.TabIndex = 28
-        Me.Button2.Text = "Enter PostCode"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(140, 14)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(122, 60)
-        Me.Button3.TabIndex = 172
-        Me.Button3.Text = "Enter No"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(266, 14)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(122, 60)
-        Me.Button7.TabIndex = 173
-        Me.Button7.Text = "Enter Address"
-        Me.Button7.UseVisualStyleBackColor = True
         '
         'Form1
         '

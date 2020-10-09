@@ -101,6 +101,7 @@ Public Class frmKebabs
     End Sub
 
     Private Sub frmKebabs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         'Me.WindowState = FormWindowState.Maximized
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
@@ -126,6 +127,7 @@ Public Class frmKebabs
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         frmBasket.dtPublic.Rows.Add("DONNER BARM MEAL", "£", 5.5)
+        frmBasket.dtPublic.Rows.Add("CHIPS")
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
@@ -174,5 +176,9 @@ Public Class frmKebabs
         frmBasket.dtPublic.Rows.Add("Meal", "£", 1.7)
         frmBasket.dtPublic.Rows.Add("Chips") '
         frmMealDrink.Show()
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs)
+        frmBasket.dtPublic.Rows.Add("NO CHEESE") '
     End Sub
 End Class

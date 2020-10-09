@@ -57,7 +57,7 @@ Partial Class frmFriedChicken
         Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(584, 33)
+        Me.Button17.Location = New System.Drawing.Point(436, 652)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(68, 34)
         Me.Button17.TabIndex = 62
@@ -69,7 +69,7 @@ Partial Class frmFriedChicken
         Me.lblVersion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVersion.Location = New System.Drawing.Point(409, 44)
+        Me.lblVersion.Location = New System.Drawing.Point(418, 44)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(88, 13)
         Me.lblVersion.TabIndex = 61
@@ -82,7 +82,7 @@ Partial Class frmFriedChicken
         Me.label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.Location = New System.Drawing.Point(498, 44)
+        Me.label2.Location = New System.Drawing.Point(507, 44)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(80, 13)
         Me.label2.TabIndex = 60
@@ -95,7 +95,7 @@ Partial Class frmFriedChicken
         Me.lblTime.BackColor = System.Drawing.Color.Black
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(830, 20)
+        Me.lblTime.Location = New System.Drawing.Point(839, 20)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(135, 33)
         Me.lblTime.TabIndex = 59
@@ -105,7 +105,7 @@ Partial Class frmFriedChicken
         '
         Me.pictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox2.BackColor = System.Drawing.Color.Black
-        Me.pictureBox2.Location = New System.Drawing.Point(809, 12)
+        Me.pictureBox2.Location = New System.Drawing.Point(818, 12)
         Me.pictureBox2.Name = "pictureBox2"
         Me.pictureBox2.Size = New System.Drawing.Size(178, 50)
         Me.pictureBox2.TabIndex = 58
@@ -117,7 +117,7 @@ Partial Class frmFriedChicken
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.Red
-        Me.label1.Location = New System.Drawing.Point(406, 10)
+        Me.label1.Location = New System.Drawing.Point(415, 10)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(172, 31)
         Me.label1.TabIndex = 57
@@ -143,10 +143,10 @@ Partial Class frmFriedChicken
         Me.dgvBasket.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBasket.Location = New System.Drawing.Point(501, 68)
+        Me.dgvBasket.Location = New System.Drawing.Point(510, 68)
         Me.dgvBasket.Name = "dgvBasket"
         Me.dgvBasket.ReadOnly = True
-        Me.dgvBasket.Size = New System.Drawing.Size(494, 554)
+        Me.dgvBasket.Size = New System.Drawing.Size(486, 618)
         Me.dgvBasket.TabIndex = 63
         '
         'lblTotal
@@ -155,7 +155,7 @@ Partial Class frmFriedChicken
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.Red
-        Me.lblTotal.Location = New System.Drawing.Point(653, 625)
+        Me.lblTotal.Location = New System.Drawing.Point(662, 689)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(87, 31)
         Me.lblTotal.TabIndex = 66
@@ -168,7 +168,7 @@ Partial Class frmFriedChicken
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(617, 625)
+        Me.Label4.Location = New System.Drawing.Point(626, 689)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(30, 31)
         Me.Label4.TabIndex = 65
@@ -181,7 +181,7 @@ Partial Class frmFriedChicken
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(495, 625)
+        Me.Label3.Location = New System.Drawing.Point(504, 689)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 31)
         Me.Label3.TabIndex = 64
@@ -319,7 +319,7 @@ Partial Class frmFriedChicken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(999, 665)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button10)

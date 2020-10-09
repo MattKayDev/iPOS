@@ -70,6 +70,7 @@ Public Class frmFriedChicken
     End Sub
 
     Private Sub frmFriedChicken_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         'Me.WindowState = FormWindowState.Maximized
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version

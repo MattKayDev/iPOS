@@ -83,6 +83,7 @@ Partial Class frmPizzaSizes
         Me.Controls.Add(Me.button3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPizzaSizes"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmKebabs
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmKebabs
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmKebabs))
@@ -55,10 +55,10 @@ Partial Class frmKebabs
         '
         'Button17
         '
-        Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(643, 28)
+        Me.Button17.Location = New System.Drawing.Point(428, 652)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(68, 34)
         Me.Button17.TabIndex = 73
@@ -71,7 +71,7 @@ Partial Class frmKebabs
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.Red
-        Me.lblTotal.Location = New System.Drawing.Point(795, 646)
+        Me.lblTotal.Location = New System.Drawing.Point(654, 689)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(87, 31)
         Me.lblTotal.TabIndex = 72
@@ -84,7 +84,7 @@ Partial Class frmKebabs
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(759, 646)
+        Me.Label4.Location = New System.Drawing.Point(618, 689)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(30, 31)
         Me.Label4.TabIndex = 71
@@ -97,7 +97,7 @@ Partial Class frmKebabs
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(637, 646)
+        Me.Label3.Location = New System.Drawing.Point(496, 689)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 31)
         Me.Label3.TabIndex = 70
@@ -113,10 +113,10 @@ Partial Class frmKebabs
         Me.dgvBasket.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBasket.Location = New System.Drawing.Point(643, 68)
+        Me.dgvBasket.Location = New System.Drawing.Point(502, 68)
         Me.dgvBasket.Name = "dgvBasket"
         Me.dgvBasket.ReadOnly = True
-        Me.dgvBasket.Size = New System.Drawing.Size(494, 575)
+        Me.dgvBasket.Size = New System.Drawing.Size(494, 618)
         Me.dgvBasket.TabIndex = 69
         '
         'button15
@@ -135,7 +135,7 @@ Partial Class frmKebabs
         Me.lblVersion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVersion.Location = New System.Drawing.Point(468, 43)
+        Me.lblVersion.Location = New System.Drawing.Point(327, 43)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(88, 13)
         Me.lblVersion.TabIndex = 67
@@ -148,7 +148,7 @@ Partial Class frmKebabs
         Me.label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.Location = New System.Drawing.Point(557, 43)
+        Me.label2.Location = New System.Drawing.Point(416, 43)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(80, 13)
         Me.label2.TabIndex = 66
@@ -161,7 +161,7 @@ Partial Class frmKebabs
         Me.lblTime.BackColor = System.Drawing.Color.Black
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTime.Location = New System.Drawing.Point(980, 20)
+        Me.lblTime.Location = New System.Drawing.Point(839, 20)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(135, 33)
         Me.lblTime.TabIndex = 65
@@ -171,7 +171,7 @@ Partial Class frmKebabs
         '
         Me.pictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox2.BackColor = System.Drawing.Color.Black
-        Me.pictureBox2.Location = New System.Drawing.Point(959, 12)
+        Me.pictureBox2.Location = New System.Drawing.Point(818, 12)
         Me.pictureBox2.Name = "pictureBox2"
         Me.pictureBox2.Size = New System.Drawing.Size(178, 50)
         Me.pictureBox2.TabIndex = 64
@@ -183,7 +183,7 @@ Partial Class frmKebabs
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.Red
-        Me.label1.Location = New System.Drawing.Point(465, 9)
+        Me.label1.Location = New System.Drawing.Point(324, 9)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(172, 31)
         Me.label1.TabIndex = 63
@@ -331,7 +331,7 @@ Partial Class frmKebabs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1149, 686)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button10)

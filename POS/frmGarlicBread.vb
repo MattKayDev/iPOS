@@ -2,6 +2,7 @@
 Public Class frmGarlicBread
     Dim versionNumber As Version
     Private Sub frmGarlicBread_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
         lblTime.Text = DateTime.Now.ToString("HH:mm:ss")
@@ -91,5 +92,24 @@ Public Class frmGarlicBread
     Private Sub button15_Click(sender As Object, e As EventArgs) Handles button15.Click
         Me.Hide()
         frmBasket.Show()
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        frmBasket.dtPublic.Rows.Add("FREE GARLIC BREAD 10" & ControlChars.Quote)
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        frmBasket.dtPublic.Rows.Add("CHEESE")
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        If dgvBasket.Rows.Count > 0 Then
+            Dim index As Integer
+            index = dgvBasket.CurrentCell.RowIndex
+            dgvBasket.Rows.RemoveAt(index)
+            Dim dtNew As New DataTable
+            dtNew = TryCast(dgvBasket.DataSource, DataTable)
+            frmBasket.dtPublic = dtNew
+        End If
     End Sub
 End Class

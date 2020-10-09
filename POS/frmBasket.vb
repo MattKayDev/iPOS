@@ -8,6 +8,7 @@ Public Class frmBasket
     'ssssPublic dgvBasketTest As DataGridView
 
     Private Sub frmBasket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        label1.Text = My.Settings.posName
         Me.WindowState = FormWindowState.Maximized
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
         lblTime.Text = DateTime.Now.ToString("HH:mm:ss")

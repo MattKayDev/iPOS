@@ -92,7 +92,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\pos\data\POS.mak")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\pos\data\POS.wdb")>  _
         Public Property dbPath() As String
             Get
                 Return CType(Me("dbPath"),String)
@@ -111,6 +111,18 @@ Namespace My
             End Get
             Set
                 Me("nextLicensePath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("iPOS - Il Padrino")>  _
+        Public Property posName() As String
+            Get
+                Return CType(Me("posName"),String)
+            End Get
+            Set
+                Me("posName") = value
             End Set
         End Property
     End Class
