@@ -20,3 +20,4 @@ So based on the knowledge of their current POS System I have impletemented this 
   - Add possibility for the user to add more buttons 
   - Give user option to change the prices
   - Add API to connect to UBER Eats/Deliveroo/JustEat
+  - Add possiblity to dial number on the phone by clicking in the app
