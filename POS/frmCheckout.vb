@@ -551,7 +551,7 @@ Public Class frmCheckout
     End Sub
 
     Private Sub frmCheckout_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Form1.Close()
+        'Form1.Close()
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
@@ -622,13 +622,13 @@ Public Class frmCheckout
         txtAddress.Text = ""
         txtNo.Text = ""
         txtCustNumb.Text = ""
-        Form1.txtAddress.Text = ""
-        Form1.txtNo.Text = ""
-        Form1.txtPostCode.Text = ""
-        Form1.gpbPostCode.Visible = False
+        'MainForm.txtAddress.Text = ""
+        'MainForm.txtNo.Text = ""
+        'MainForm.txtPostCode.Text = ""
+        'MainForm.gpbPostCode.Visible = False
         My.Settings.delivery = False
         Me.Hide()
-        Form1.Show()
+        MainForm.Show()
     End Sub
 
     Private Sub Print_Receipt()

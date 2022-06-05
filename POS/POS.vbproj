@@ -124,41 +124,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="Database.vb" />
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBasket.Designer.vb">
+    <Compile Include="OldViews\frmBasket.Designer.vb">
       <DependentUpon>frmBasket.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBasket.vb">
+    <Compile Include="OldViews\frmBasket.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBurger.Designer.vb">
+    <Compile Include="OldViews\frmBurger.Designer.vb">
       <DependentUpon>frmBurger.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBurger.vb">
+    <Compile Include="OldViews\frmBurger.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBurgerSauce.Designer.vb">
+    <Compile Include="OldViews\frmBurgerSauce.Designer.vb">
       <DependentUpon>frmBurgerSauce.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBurgerSauce.vb">
+    <Compile Include="OldViews\frmBurgerSauce.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBurgerSides.Designer.vb">
+    <Compile Include="OldViews\frmBurgerSides.Designer.vb">
       <DependentUpon>frmBurgerSides.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBurgerSides.vb">
+    <Compile Include="OldViews\frmBurgerSides.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBurgersize.Designer.vb">
+    <Compile Include="OldViews\frmBurgersize.Designer.vb">
       <DependentUpon>frmBurgersize.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBurgersize.vb">
+    <Compile Include="OldViews\frmBurgersize.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCheckout.Designer.vb">
@@ -167,106 +168,106 @@
     <Compile Include="frmCheckout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDrinks.Designer.vb">
+    <Compile Include="OldViews\frmDrinks.Designer.vb">
       <DependentUpon>frmDrinks.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmDrinks.vb">
+    <Compile Include="OldViews\frmDrinks.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFriedChicken.Designer.vb">
+    <Compile Include="OldViews\frmFriedChicken.Designer.vb">
       <DependentUpon>frmFriedChicken.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmFriedChicken.vb">
+    <Compile Include="OldViews\frmFriedChicken.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGarlicBread.Designer.vb">
+    <Compile Include="OldViews\frmGarlicBread.Designer.vb">
       <DependentUpon>frmGarlicBread.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGarlicBread.vb">
+    <Compile Include="OldViews\frmGarlicBread.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJacketPotatoes.Designer.vb">
+    <Compile Include="OldViews\frmJacketPotatoes.Designer.vb">
       <DependentUpon>frmJacketPotatoes.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmJacketPotatoes.vb">
+    <Compile Include="OldViews\frmJacketPotatoes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKebabs.Designer.vb">
+    <Compile Include="OldViews\frmKebabs.Designer.vb">
       <DependentUpon>frmKebabs.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmKebabs.vb">
+    <Compile Include="OldViews\frmKebabs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKebabSalad.Designer.vb">
+    <Compile Include="OldViews\frmKebabSalad.Designer.vb">
       <DependentUpon>frmKebabSalad.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmKebabSalad.vb">
+    <Compile Include="OldViews\frmKebabSalad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKebabSauce.Designer.vb">
+    <Compile Include="OldViews\frmKebabSauce.Designer.vb">
       <DependentUpon>frmKebabSauce.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmKebabSauce.vb">
+    <Compile Include="OldViews\frmKebabSauce.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKebabSelect.Designer.vb">
+    <Compile Include="OldViews\frmKebabSelect.Designer.vb">
       <DependentUpon>frmKebabSelect.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmKebabSelect.vb">
+    <Compile Include="OldViews\frmKebabSelect.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKidsMeals.Designer.vb">
+    <Compile Include="OldViews\frmKidsMeals.Designer.vb">
       <DependentUpon>frmKidsMeals.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmKidsMeals.vb">
+    <Compile Include="OldViews\frmKidsMeals.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMealDrink.Designer.vb">
+    <Compile Include="OldViews\frmMealDrink.Designer.vb">
       <DependentUpon>frmMealDrink.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMealDrink.vb">
+    <Compile Include="OldViews\frmMealDrink.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPizzaBase.Designer.vb">
+    <Compile Include="OldViews\frmPizzaBase.Designer.vb">
       <DependentUpon>frmPizzaBase.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPizzaBase.vb">
+    <Compile Include="OldViews\frmPizzaBase.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPizzaCalzone.Designer.vb">
+    <Compile Include="OldViews\frmPizzaCalzone.Designer.vb">
       <DependentUpon>frmPizzaCalzone.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPizzaCalzone.vb">
+    <Compile Include="OldViews\frmPizzaCalzone.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPizzas.Designer.vb">
+    <Compile Include="OldViews\frmPizzas.Designer.vb">
       <DependentUpon>frmPizzas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPizzas.vb">
+    <Compile Include="OldViews\frmPizzas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPizzaSizes.Designer.vb">
+    <Compile Include="OldViews\frmPizzaSizes.Designer.vb">
       <DependentUpon>frmPizzaSizes.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPizzaSizes.vb">
+    <Compile Include="OldViews\frmPizzaSizes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPizzaToppings.Designer.vb">
+    <Compile Include="OldViews\frmPizzaToppings.Designer.vb">
       <DependentUpon>frmPizzaToppings.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPizzaToppings.vb">
+    <Compile Include="OldViews\frmPizzaToppings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSideOrders.Designer.vb">
+    <Compile Include="OldViews\frmSideOrders.Designer.vb">
       <DependentUpon>frmSideOrders.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSideOrders.vb">
+    <Compile Include="OldViews\frmSideOrders.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWraps.Designer.vb">
+    <Compile Include="OldViews\frmWraps.Designer.vb">
       <DependentUpon>frmWraps.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmWraps.vb">
+    <Compile Include="OldViews\frmWraps.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -287,78 +288,84 @@
     </Compile>
     <Compile Include="Printer.vb" />
     <Compile Include="PrintingFormat.vb" />
+    <Compile Include="Views\MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBasket.resx">
+    <EmbeddedResource Include="OldViews\frmBasket.resx">
       <DependentUpon>frmBasket.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBurger.resx">
+    <EmbeddedResource Include="OldViews\frmBurger.resx">
       <DependentUpon>frmBurger.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBurgerSauce.resx">
+    <EmbeddedResource Include="OldViews\frmBurgerSauce.resx">
       <DependentUpon>frmBurgerSauce.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBurgerSides.resx">
+    <EmbeddedResource Include="OldViews\frmBurgerSides.resx">
       <DependentUpon>frmBurgerSides.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBurgersize.resx">
+    <EmbeddedResource Include="OldViews\frmBurgersize.resx">
       <DependentUpon>frmBurgersize.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckout.resx">
       <DependentUpon>frmCheckout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDrinks.resx">
+    <EmbeddedResource Include="OldViews\frmDrinks.resx">
       <DependentUpon>frmDrinks.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFriedChicken.resx">
+    <EmbeddedResource Include="OldViews\frmFriedChicken.resx">
       <DependentUpon>frmFriedChicken.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGarlicBread.resx">
+    <EmbeddedResource Include="OldViews\frmGarlicBread.resx">
       <DependentUpon>frmGarlicBread.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJacketPotatoes.resx">
+    <EmbeddedResource Include="OldViews\frmJacketPotatoes.resx">
       <DependentUpon>frmJacketPotatoes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKebabs.resx">
+    <EmbeddedResource Include="OldViews\frmKebabs.resx">
       <DependentUpon>frmKebabs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKebabSalad.resx">
+    <EmbeddedResource Include="OldViews\frmKebabSalad.resx">
       <DependentUpon>frmKebabSalad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKebabSauce.resx">
+    <EmbeddedResource Include="OldViews\frmKebabSauce.resx">
       <DependentUpon>frmKebabSauce.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKebabSelect.resx">
+    <EmbeddedResource Include="OldViews\frmKebabSelect.resx">
       <DependentUpon>frmKebabSelect.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKidsMeals.resx">
+    <EmbeddedResource Include="OldViews\frmKidsMeals.resx">
       <DependentUpon>frmKidsMeals.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMealDrink.resx">
+    <EmbeddedResource Include="OldViews\frmMealDrink.resx">
       <DependentUpon>frmMealDrink.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPizzaBase.resx">
+    <EmbeddedResource Include="OldViews\frmPizzaBase.resx">
       <DependentUpon>frmPizzaBase.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPizzaCalzone.resx">
+    <EmbeddedResource Include="OldViews\frmPizzaCalzone.resx">
       <DependentUpon>frmPizzaCalzone.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPizzas.resx">
+    <EmbeddedResource Include="OldViews\frmPizzas.resx">
       <DependentUpon>frmPizzas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPizzaSizes.resx">
+    <EmbeddedResource Include="OldViews\frmPizzaSizes.resx">
       <DependentUpon>frmPizzaSizes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPizzaToppings.resx">
+    <EmbeddedResource Include="OldViews\frmPizzaToppings.resx">
       <DependentUpon>frmPizzaToppings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSideOrders.resx">
+    <EmbeddedResource Include="OldViews\frmSideOrders.resx">
       <DependentUpon>frmSideOrders.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWraps.resx">
+    <EmbeddedResource Include="OldViews\frmWraps.resx">
       <DependentUpon>frmWraps.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -366,6 +373,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
