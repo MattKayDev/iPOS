@@ -11,8 +11,9 @@ Public Class Database
 
 
 
-    Public Shared Sub Create_Database_Connection()
+    Public Shared Function Create_Database_Connection()
         Dim db As New Database()
+        Dim con As New OleDbConnection
         Dim strCon As String = db.dbProvider & db.dbSource & db.dbFileName
 
         con.ConnectionString = strCon
@@ -23,7 +24,7 @@ Public Class Database
             con.Close() 'closing the old connection
             con.Open() ' opening a new connection
         End If
-    End Sub
+    End Function
 
     Public Shared Function Get_CompanyName_From_Database() As String
         Dim db As New Database()
@@ -42,7 +43,7 @@ Public Class Database
         End Using
     End Function
 
-    Public Shared Sub Create_Order_In_Basket(orderDate As String, orderTime As String, orderType As String, product As String, price As String, qty As String)
+    Public Shared Sub Create_Order_In_Basket(orderDatenTime As DateTime, delivery As Boolean, product As String, price As String, qty As String)
         Dim db As New Database()
         Dim strCon As String = db.dbProvider & db.dbSource & db.dbFileName
         Using con As New OleDbConnection(strCon)
@@ -51,11 +52,37 @@ Public Class Database
             cmd.CommandText = sql
             cmd.Connection = con
             cmd.ExecuteNonQuery()
-            sql = "INSERT INTO tblBasket VALUES ('" & orderType & "','" & orderDate & "','" & orderTime & "','" & product & "','" & price & "','" & qty & "')"
+            'sql = "INSERT INTO tblBasket VALUES ('" & orderType & "','" & orderDate & "','" & orderTime & "','" & product & "','" & price & "','" & qty & "')"
             cmd.CommandText = sql
             cmd.ExecuteNonQuery()
         End Using
     End Sub
+
+    Public Shared Function Get_Price_Of(product As String, category As String, size As String) As Double
+        Try
+            product = product.ToLower()
+            Dim item
+            Dim db As New Database()
+            Dim strCon As String = db.dbProvider & db.dbSource & db.dbFileName
+            Using con As New OleDbConnection(strCon)
+                Dim sql As String = $"SELECT [Price] FROM [tblProducts] WHERE [ProductName] = '{product}' AND [Category] = '{category}' AND [Size] = '{size}'"
+                Using cmd As New OleDbCommand(sql, con)
+                    con.Open()
+                    If Not IsNothing(cmd.ExecuteScalar()) Then
+                        item = cmd.ExecuteScalar()
+                    End If
+                End Using
+            End Using
+            If IsNumeric(item) Then
+                Return Convert.ToDouble(item)
+            End If
+            Return 0
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Console.WriteLine(ex.Message)
+            Return 0
+        End Try
+    End Function
 
 
 End Class

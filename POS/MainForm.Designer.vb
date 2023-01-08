@@ -38,9 +38,15 @@ Partial Class MainForm
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.pMain = New System.Windows.Forms.Panel()
+        Me.dgvBasket = New System.Windows.Forms.DataGridView()
+        Me.colProduct = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnRemoveItem = New System.Windows.Forms.Button()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBanner, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pMain.SuspendLayout()
+        CType(Me.dgvBasket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTime
@@ -81,7 +87,7 @@ Partial Class MainForm
         Me.btnAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdmin.Location = New System.Drawing.Point(256, -258)
+        Me.btnAdmin.Location = New System.Drawing.Point(256, -205)
         Me.btnAdmin.Name = "btnAdmin"
         Me.btnAdmin.Size = New System.Drawing.Size(122, 47)
         Me.btnAdmin.TabIndex = 15
@@ -95,7 +101,7 @@ Partial Class MainForm
         Me.button4.BackColor = System.Drawing.Color.Silver
         Me.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button4.Location = New System.Drawing.Point(644, -121)
+        Me.button4.Location = New System.Drawing.Point(644, -68)
         Me.button4.Name = "button4"
         Me.button4.Size = New System.Drawing.Size(137, 47)
         Me.button4.TabIndex = 14
@@ -118,6 +124,7 @@ Partial Class MainForm
         '
         'lblIPOS
         '
+        Me.lblIPOS.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblIPOS.AutoSize = True
         Me.lblIPOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIPOS.ForeColor = System.Drawing.Color.Red
@@ -145,6 +152,7 @@ Partial Class MainForm
         '
         'lblVersion
         '
+        Me.lblVersion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVersion.Location = New System.Drawing.Point(418, 46)
@@ -157,6 +165,7 @@ Partial Class MainForm
         '
         'lblByMattKayDev
         '
+        Me.lblByMattKayDev.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblByMattKayDev.AutoSize = True
         Me.lblByMattKayDev.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblByMattKayDev.Location = New System.Drawing.Point(507, 46)
@@ -167,10 +176,10 @@ Partial Class MainForm
         '
         'btnClose
         '
-        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClose.Location = New System.Drawing.Point(634, 253)
+        Me.btnClose.Location = New System.Drawing.Point(3, 306)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(122, 47)
         Me.btnClose.TabIndex = 19
@@ -182,7 +191,7 @@ Partial Class MainForm
         Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(224, -199)
+        Me.Button6.Location = New System.Drawing.Point(224, -146)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(122, 60)
         Me.Button6.TabIndex = 22
@@ -200,14 +209,65 @@ Partial Class MainForm
         Me.pMain.Controls.Add(Me.btnClose)
         Me.pMain.Location = New System.Drawing.Point(12, 68)
         Me.pMain.Name = "pMain"
-        Me.pMain.Size = New System.Drawing.Size(759, 303)
+        Me.pMain.Size = New System.Drawing.Size(403, 356)
         Me.pMain.TabIndex = 23
+        '
+        'dgvBasket
+        '
+        Me.dgvBasket.AllowUserToAddRows = False
+        Me.dgvBasket.AllowUserToDeleteRows = False
+        Me.dgvBasket.AllowUserToResizeColumns = False
+        Me.dgvBasket.AllowUserToResizeRows = False
+        Me.dgvBasket.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvBasket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBasket.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colProduct, Me.colQuantity, Me.colPrice})
+        Me.dgvBasket.Location = New System.Drawing.Point(421, 68)
+        Me.dgvBasket.Name = "dgvBasket"
+        Me.dgvBasket.ReadOnly = True
+        Me.dgvBasket.RowHeadersVisible = False
+        Me.dgvBasket.Size = New System.Drawing.Size(350, 303)
+        Me.dgvBasket.TabIndex = 24
+        '
+        'colProduct
+        '
+        Me.colProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colProduct.HeaderText = "Product"
+        Me.colProduct.Name = "colProduct"
+        Me.colProduct.ReadOnly = True
+        '
+        'colQuantity
+        '
+        Me.colQuantity.HeaderText = "Q"
+        Me.colQuantity.Name = "colQuantity"
+        Me.colQuantity.ReadOnly = True
+        Me.colQuantity.Width = 45
+        '
+        'colPrice
+        '
+        Me.colPrice.HeaderText = "£"
+        Me.colPrice.Name = "colPrice"
+        Me.colPrice.ReadOnly = True
+        Me.colPrice.Width = 45
+        '
+        'btnRemoveItem
+        '
+        Me.btnRemoveItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRemoveItem.Location = New System.Drawing.Point(421, 377)
+        Me.btnRemoveItem.Name = "btnRemoveItem"
+        Me.btnRemoveItem.Size = New System.Drawing.Size(75, 47)
+        Me.btnRemoveItem.TabIndex = 25
+        Me.btnRemoveItem.Text = "X"
+        Me.btnRemoveItem.UseVisualStyleBackColor = True
+        Me.btnRemoveItem.Visible = False
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(783, 383)
+        Me.ClientSize = New System.Drawing.Size(783, 436)
+        Me.Controls.Add(Me.btnRemoveItem)
+        Me.Controls.Add(Me.dgvBasket)
         Me.Controls.Add(Me.picBanner)
         Me.Controls.Add(Me.pMain)
         Me.Controls.Add(Me.Button6)
@@ -224,6 +284,7 @@ Partial Class MainForm
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBanner, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pMain.ResumeLayout(False)
+        CType(Me.dgvBasket, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,4 +304,9 @@ Partial Class MainForm
     Private WithEvents btnClose As Button
     Private WithEvents Button6 As Button
     Friend WithEvents pMain As Panel
+    Friend WithEvents dgvBasket As DataGridView
+    Friend WithEvents colProduct As DataGridViewTextBoxColumn
+    Friend WithEvents colQuantity As DataGridViewTextBoxColumn
+    Friend WithEvents colPrice As DataGridViewTextBoxColumn
+    Friend WithEvents btnRemoveItem As Button
 End Class

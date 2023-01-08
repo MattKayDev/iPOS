@@ -12,7 +12,6 @@ Public Class MainForm
     Dim selectedNo As Boolean
     Dim selectedAddress As Boolean
 
-
     Dim dbProvider As String
     Dim dbSource As String
 
@@ -26,13 +25,19 @@ Public Class MainForm
 
     Dim foundAddress As Boolean
 
+    Public Shared order As New Order
     Private Sub btnDelivery_Click(sender As Object, e As EventArgs) Handles btnDelivery.Click
-        Create_Order_In_Basket()
-
+        order.Type = True
+        HideMainControls()
+        Dim mainMenu As New MainMenuView
+        pMain.Controls.Add(mainMenu)
     End Sub
 
     Private Sub btnCollection_Click(sender As Object, e As EventArgs) Handles btnCollection.Click
-
+        order.Type = False
+        HideMainControls()
+        Dim mainMenu As New MainMenuView
+        pMain.Controls.Add(mainMenu)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -40,14 +45,14 @@ Public Class MainForm
         versionNumber = Assembly.GetExecutingAssembly().GetName().Version
         lblVersion.Text = versionNumber.ToString()
         timer1.Start()
-        lblIPOS.Text = "iPOS - " & Get_CompanyName_From_Database()
+        lblIPOS.Text = "iPOS" ' - " & Get_CompanyName_From_Database()
     End Sub
 
     Private Sub timer1_Tick(sender As Object, e As EventArgs) Handles timer1.Tick
         lblTime.Text = DateTime.Now.ToString("HH:mm:ss")
     End Sub
 
-    Private Sub button5_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to close?", "Finished? ", MessageBoxButtons.YesNo)
         If result = DialogResult.No Then
             'MessageBox.Show("No pressed")
@@ -59,62 +64,43 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        frmBasket.dtPublic.Clear()
+    Sub HideMainControls()
+        picBanner.Visible = False
+        btnCollection.Visible = False
+        btnDelivery.Visible = False
+        btnClose.Visible = False
     End Sub
 
-
-    Private Sub Read_License()
-        Dim fileReader As String
-        fileReader = My.Computer.FileSystem.ReadAllText("C:\POS\data\lic\POS.wlk")
-        My.Settings.license = fileReader
+    Sub ShowMainControls()
+        picBanner.Visible = True
+        btnCollection.Visible = True
+        btnDelivery.Visible = True
+        btnClose.Visible = True
     End Sub
 
-    Function RandomString(r As Random)
-        Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-        Dim sb As New StringBuilder
-        Dim cnt As Integer = r.Next(15, 33)
-        For i As Integer = 1 To cnt
-            Dim idx As Integer = r.Next(0, s.Length)
-            sb.Append(s.Substring(idx, 1))
-        Next
-        Return sb.ToString()
-    End Function
-
-
-
-
-
-    'Private Sub Button22_Click(sender As Object, e As EventArgs)
-
-
-    '    Dim letter As Char = sender.ToString(sender.ToString.Length - 1)
-    '    If selectedPostCode Then
-    '        txtPostCode.Text = txtPostCode.Text & letter
-    '    ElseIf selectedNo Then
-    '        txtNo.Text = txtNo.Text & letter
-    '    ElseIf selectedAddress Then
-    '        txtAddress.Text = txtAddress.Text & letter
-    '    End If
-    'End Sub
-
-
-    Private Sub Button2_Click_2(sender As Object, e As EventArgs)
-        selectedPostCode = True
-        selectedNo = False
-        selectedAddress = False
+    Private Sub dgvBasket_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dgvBasket.RowsAdded
+        btnRemovedVisibiity()
     End Sub
 
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs)
-        selectedPostCode = False
-        selectedNo = True
-        selectedAddress = False
+    Private Sub dgvBasket_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles dgvBasket.RowsRemoved
+        btnRemovedVisibiity()
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs)
-        selectedPostCode = False
-        selectedNo = False
-        selectedAddress = True
+    Sub btnRemovedVisibiity()
+        If dgvBasket.RowCount > 0 Then
+            btnRemoveItem.Visible = True
+        ElseIf dgvBasket.RowCount = 0 Then
+            btnRemoveItem.Visible = False
+
+        End If
     End Sub
 
+    Private Sub btnRemoveItem_Click(sender As Object, e As EventArgs) Handles btnRemoveItem.Click
+        If dgvBasket.RowCount > 0 Then
+            If dgvBasket.CurrentCell.Selected Then
+                Dim index As Integer = dgvBasket.CurrentCell.RowIndex
+                dgvBasket.Rows.RemoveAt(index)
+            End If
+        End If
+    End Sub
 End Class
