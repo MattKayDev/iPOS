@@ -4,14 +4,20 @@ The customer didn't ask for any security or specifics to be implemented they jus
 
 So based on the knowledge of their current POS System I have impletemented this simple POS for them which they are using now.
  
-# 2023 - Current stage of the project
-The project is back alive!The customer doesn't need to make changes to their current one as they are happy with what they have however for future proofing and maybe having this POS system used by another takeaway I think it will be best to make it more modern with a database that can be easily changed by the user.
+# 2023 - Current state of the project
+It's January 2023 and project is back alive!
+The customer doesn't need to make changes to their current one as they are happy with what they have; however I know that they might eventually ask for a easy way of updating products and prices, or maybe another takeaway might ask for a similar system, I think it will be in my best intrest to make necessary changes to the current project so that the user can make the changes easily without having to access any of the code.
  
- # Things done so far:
- - Access Database has been added so can be easily edited with MS Access but for ease of use I will add extra functionality which will allow the user to add products, edit them, takeaway info in case of multiple sites etc.
- - Logging orders so can go back and check the past order details
+ # To do: 
+ - Databse to store takeaway info, products users, orders etc.
+ - UI to reflect products, reports, orders, users 
  - Export Reports
  - Built in user system
+
+ # Current capabilities from earlier version:
+  - Receipt Printing
+  - Selecting Collection or Delivery 
+  - All other functionality has been deprecated to make way for new and improved versions.
  
  # Extra possible improvements:
   - Possible post code look up
